@@ -19,7 +19,7 @@ object ProjectSetting {
     const val NAME_APP = "Implementation Action Auto"
 
     const val APP_DOMAIN = "com"
-    const val APP_PLAY_CONSOLE = "amirisback"
+    const val APP_PLAY_CONSOLE = "imam"
     const val APP_NAME = "implaction"
 
     const val VERSION_MAJOR = 2
