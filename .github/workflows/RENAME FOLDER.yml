@@ -1,11 +1,11 @@
-name: Build APK AAB and Rename Folder
+name: BUILD WALLPAPER
 
 env:
   # Nama modul utama pada repository
   main_project_module: app
 
   # Nama Play Store
-  playstore_name: Frogobox ID
+  playstore_name: NEXEAT WALLPAPER
 
   # Nama packagename yang baru
   new_package_name: com.frogobox.newpackagename
@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # Lihat 'Supported distributions' untuk opsi yang tersedia
-          java-version: '17'
+          java-version: '16'
           cache: 'gradle'
 
       - name: Change wrapper permissions
@@ -61,7 +61,7 @@ jobs:
       - name: Rename folder packagename
         run: mv com/frogobox/githubaction ${{ env.new_package_name }}
 
-      # Upload Build Artifact
+      # Upload Build Artifact APK Debug
       # Dicatat untuk Output [main_project_module]/build/outputs/apk/debug/
       - name: Upload APK Debug - ${{ env.repository_name }}
         uses: actions/upload-artifact@v3
