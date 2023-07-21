@@ -8,7 +8,7 @@ env:
   playstore_name: NEXEAT WALLPAPER
 
   # Nama packagename yang baru
-  new_package_name: com.frogobox.newpackagename
+  new_package_name: "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
 
 on:
   push:
