@@ -59,7 +59,7 @@ jobs:
 
       # Ubah Nama Folder Packagename
       - name: Rename folder packagename
-        run: mv com/frogobox/githubaction ${{ env.new_package_name }}
+        run: mv app/src/androidTest/java/com/frogobox/githubaction app/src/androidTest/java/${{ env.new_package_name }}
 
       # Upload Build Artifact APK Debug
       # Dicatat untuk Output [main_project_module]/build/outputs/apk/debug/
