@@ -1,11 +1,11 @@
-name: Bersihkan - Hapus semua artefak yang berusia di atas 3 hari
+name: Bersihkan - Hapus cache dan artefak
 
 on:
   # Memungkinkan Anda menjalankan alur kerja ini secara manual dari tab Actions
   workflow_dispatch:
 
   schedule:
-    # Setiap hari pada pukul 01.00
+    # Setiap hari pukul 1 pagi
     - cron: '0 1 * * *'
 
 jobs:
@@ -19,7 +19,5 @@ jobs:
       - name: Bersihkan semua artefak
         uses: c-hive/gha-remove-artifacts@v1
         with:
-          age: 3d # '<jumlah> <unit>', misalnya 3 hari, 2 minggu, 90 detik, diuraikan oleh Moment.js
-          # Input opsional
-          # skip-tags: true
-          # skip-recent: 5
+          age: 3d # '<jumlah> <unit>', misalnya 5 hari, 2 tahun, 90 detik, diuraikan oleh Moment.js
+          GITHUB_TOKEN: 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
