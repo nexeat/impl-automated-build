@@ -1,25 +1,25 @@
-name:Clean - Clean cache and artifacts
+name: Bersihkan - Hapus semua artefak yang berusia di atas 3 hari
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
+  # Memungkinkan Anda menjalankan alur kerja ini secara manual dari tab Actions
   workflow_dispatch:
 
   schedule:
-    # Every day at 1am
+    # Setiap hari pada pukul 01.00
     - cron: '0 1 * * *'
 
 jobs:
-  remove-old-artifacts:
+  hapus-artefak-lama:
 
     runs-on: ubuntu-latest
 
     timeout-minutes: 10
 
     steps:
-      - name: Clean all artifacts
+      - name: Bersihkan semua artefak
         uses: c-hive/gha-remove-artifacts@v1
         with:
-          age: 14d # '<number> <unit>', e.g. 5 days, 2 years, 90 seconds, parsed by Moment.js
-          # Optional inputs
+          age: 3d # '<jumlah> <unit>', misalnya 3 hari, 2 minggu, 90 detik, diuraikan oleh Moment.js
+          # Input opsional
           # skip-tags: true
           # skip-recent: 5
